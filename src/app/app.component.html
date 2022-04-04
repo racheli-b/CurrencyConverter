@@ -1,0 +1,17 @@
+<div class="row nav-tabs" ngbNav #nav="ngbNav"  (navChange)="onNavChange($event)">
+  <div class="col-md-2 nav-item" (click)="ChangeToConverter()"  [ngbNavItem]="1"  >
+    <a class="nav-link active" >Converter</a>
+ 
+  </div>
+  <div class="col-md-2 nav-item" (click)="ChangeToAbout()" [ngbNavItem]="2">
+    <a class="nav-link" >About</a>
+
+
+  </div>
+</div>
+<div class="row">
+<router-outlet></router-outlet>
+</div>
+
+
+<!-- <router-outlet></router-outlet> -->

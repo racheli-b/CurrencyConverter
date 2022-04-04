@@ -1,0 +1,49 @@
+<form>
+    <div id="mainDiv">
+        <p>currency converter</p>
+        <!-- <table>
+            <tr *ngFor="let item of json">
+              <td>{{item.type}}</td>
+               <td>{{item.}}</td>
+              <td>{{item.}}</td> 
+            </tr>
+      
+      </table> -->
+<!-- <p>{{json}}</p> -->
+<!-- <p>{{typeCurrency}}</p> -->
+        <div class="row">
+            <div class="col">
+        <input  name="ערך" type="text" [(ngModel)]="Converter.valueFrom" value="1" (change)="addConv()">
+
+            </div>
+            <div class="col">
+                <p>From:</p>
+            </div>
+            <div class="col">
+               
+              <select name="Currency" [(ngModel)]="Converter.typeFrom" (change)="addConv()">
+                <option *ngFor="let Currency of listt" >
+                    {{Currency}}
+                </option>
+              </select>
+            </div>
+            <div class="col">
+                <p>To:</p>
+            </div>
+            <div class="col">
+              
+                    <select name="Currency" [(ngModel)]="Converter.typeTo" (change)="addConv()">
+                        <option *ngFor="let Currency of listt" >
+                            {{Currency}}
+                        </option>
+                      </select>
+               
+            </div>
+        </div>
+        <div class="col">
+
+            <P>{{Converter.valueFrom}} {{Converter.typeFrom}}={{Converter.valueTo}} {{Converter.typeTo}}</P>
+            <!-- <p>=</p> -->
+        </div>
+    </div>
+</form>
